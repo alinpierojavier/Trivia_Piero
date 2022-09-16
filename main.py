@@ -348,4 +348,5 @@ while iniciarTrivia:
           print("-> Intento",(listaPuntajeIntentos.index(puntos)+1),":",puntos,"puntos")
         print(B_BLUE,"Puntaje total:",RESET,sum(listaPuntajeIntentos),"puntos")
         iniciarTrivia = False  # Cambiamos el valor de iniciar_trivia a False para evitar que se repita.
+			
         print(UGREEN+"¡Gracias por jugar, hasta la otra oportunidad!" + RESET)
