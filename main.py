@@ -1,5 +1,5 @@
 #Importación de las librerias a usar
-
+############################################
 import time # Libreria de veces o tiempo
 import random  #Libreria random
 import os #Libreria para limpiar las pantallas 
@@ -49,7 +49,6 @@ if os.name == "posix":
    var = "clear"       
 elif os.name == "ce" or os.name == "nt" or os.name == "dos":
    var = "cls"
-
 
 ####FUNCIONES PRINCIPALES ############
 	
@@ -136,7 +135,7 @@ while iniciarTrivia:
     print( B_PURPLE + "\n Vamos a hacerlo," + user + " con tu " + RESET + B_BLUE + "intento número ", intentos, "\n" + RESET)
     time.sleep(2)
     #--Inicio de puntaje random--
-    puntaje += random.randint(0, 30)
+    puntaje += random.randint(0, 50)
     #--Mostrar puntaje actual--
     print(B_GREEN + "=========================================")
     print("[ Inicias con:", puntaje, "Puntos     ]")
@@ -152,8 +151,8 @@ while iniciarTrivia:
     print(RESET + B_GREEN + "\nTrivia lista!\n" + RESET)
     
     #------------------PREGUNTA N° 1-----------------------
-    valorRandom = random.randint(6, 15)
-    print(f"{BG_CYAN}->PREGUNTA 1:{RESET} {URED}({valorRandom} puntos si es correcta o -{valorRandom} si es incorrecta){RESET}")
+    valorRandom = random.randint(6, 25)
+    print(f"{BG_CYAN}->PREGUNTA N° 01:{RESET} {URED}({valorRandom} puntos si es correcta o -{valorRandom} si es incorrecta){RESET}")
     print("1)¿Qué judador de fútbol es el mayor con los Balones de Oro?")
     #--------Funcion que imprime las opciones desde laa lista-------
                     #a     b     c    d
@@ -174,8 +173,8 @@ while iniciarTrivia:
     time.sleep(2)
 
     ####### Pregunta 2
-    valorRandom = random.randint(9, 20)
-    print(f"{BG_CYAN}\n->PREGUNTA 2:{RESET} {URED}({valorRandom} puntos si es correcta o -{valorRandom} si es incorrecta){RESET}")
+    valorRandom = random.randint(10, 30)
+    print(f"{BG_CYAN}\n->PREGUNTA N° 02:{RESET} {URED}({valorRandom} puntos si es correcta o -{valorRandom} si es incorrecta){RESET}")
     print("\n2) ¿Cantante favorito de Leonel Messi?")
     #Funcion que imprime las opciones desde una lista
                     #a     b     c    d
@@ -195,8 +194,8 @@ while iniciarTrivia:
     time.sleep(2)
 
     ####### Pregunta 3
-    valorRandom = random.randint(5, 13)
-    print(f"{BG_CYAN}\n->PREGUNTA 3:{RESET} {URED}({valorRandom} puntos si es correcta o -{valorRandom} si es incorrecta){RESET}")
+    valorRandom = random.randint(30, 50)
+    print(f"{BG_CYAN}\n->PREGUNTA N° 03:{RESET} {URED}({valorRandom} puntos si es correcta o -{valorRandom} si es incorrecta){RESET}")
     print("\n3) Sí a Leonel Messi le asocia con la música¿Quién es la esposa de su mejor amigo?")
     #Funcion que imprime las opciones desde una lista
                     #a     b     c    d
@@ -223,7 +222,7 @@ while iniciarTrivia:
 
     ####### Pregunta 4
     #La puntuación de esta pregunta será dependiendo de la que se elija asi pruebo lo de usar OPERADORES MATEMATICOS (DESAFIO)
-    print(f"{BG_CYAN}\n->PREGUNTA 4:{RESET} {URED}El puntaje de esta pregunta dependerá de la respuesta que elijas. Elige sabiamente.{RESET}")
+    print(f"{BG_CYAN}\n->PREGUNTA N° 04:{RESET} {URED}El puntaje de esta pregunta dependerá de la respuesta que elijas. Elige sabiamente.{RESET}")
     print("\n4) ¿Con qué pie juega mas Leonel Messi?")
     #Funcion que imprime las opciones desde una lista
                     #a     b     c    d
@@ -250,7 +249,7 @@ while iniciarTrivia:
     time.sleep(2)
 
     ####### Pregunta 5
-    valorRandom = random.randint(3, 10)
+    valorRandom = random.randint(2, 20)
     print(f"{BG_CYAN}\n->PREGUNTA 5:{RESET} {URED}({valorRandom} puntos si es correcta o -{valorRandom} si es incorrecta){RESET}")
   
     print("\n5) ¿Cómo se llama la esposa de Leonel Messi?")
@@ -281,7 +280,7 @@ while iniciarTrivia:
         opcionesNum = []
         print("Elige cuanto quieres ganar o perder...: ")
         for i in range(1, 6, 1):
-            numRandom = random.randint(20, 400)
+            numRandom = random.randint(20, 500)
             print(i, ")", numRandom)
             opcionesNum.append(numRandom)
         indiceNum = int(input("Elija una opcion: "))
@@ -328,7 +327,7 @@ while iniciarTrivia:
     elif (pregunta_random != "si" and puntaje >= 40):
         print("¿Estas seguro que no eres un fanático del fútbul?.")
     elif pregunta_random != "si":
-        print("Eso no estuvo mal para no saber mucho sobre el Fútbol.")
+        print(" Eso no estuvo mal para no saber mucho sobre el Fútbol.")
 
     ##PREGUNTA SI EL USUARIO QUIERE JUGAR DE NUEVO PUNTAJE VUELVE A 0
     print(RESET + B_YELLOW + UYELLOW +
@@ -342,7 +341,7 @@ while iniciarTrivia:
     os.system(var)
     if repetir_trivia != "si": 
         print(f"{UGREEN}\nEspero {user} que lo hayas pasado bien, hasta pronto!{RESET}")
-        #RESUMEN DEL JUEGO CON LOS INTENTOS, SU PUNTAJE Y SUMA DE ESTOOS
+        #RESUMEN DEL JUEGO CON LOS INTENTOS, SU PUNTAJE Y SUMA DE ESTOS
         print(B_YELLOW+UYELLOW+"RESUMEN DE JUEGO:"+RESET)
         for puntos in listaPuntajeIntentos:
           print("-> Intento",(listaPuntajeIntentos.index(puntos)+1),":",puntos,"puntos")
